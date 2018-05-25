@@ -1,5 +1,77 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    .row
+      h1 Support tools
+      p Welcome to your support tools
+  
+  section#control-panel
+    .container
+      .row
+        p Filtrado
+        form
+          .col.s3
+            .input-field
+              input.validate#puid(placeholder="Ingresa el PUID", type="text")
+              label(for="puid")
+          .col.s4
+            .input-field
+              input.datepicker#datepicker(placeholder="Fecha de búsqueda", type="text")
+              label(for="datepicker")
+        
+  section#table-data
+    .container
+      .row
+        p Solo da click para mostrar más
+        table.outside.centered
+          col(width="5%")
+          col(width="15%")
+          col(width="10%")
+          col(width="25%")
+          col(width="35%")
+          col(width="10%")
+          thead
+            tr
+              th #
+              th Time
+              th Date
+              th PUID
+              th Name
+              th Progress
+          tbody
+            ul
+              tr
+                td.collapsible.z-depth-0#collapsible-data(data-collapsible="accordion", colspan="6")
+                  li
+                    .collapsible-header 
+                      p
+                        table.inside
+                          col(width="5%")
+                          col(width="15%")
+                          col(width="10%")
+                          col(width="25%")
+                          col(width="35%")
+                          col(width="10%")
+                          tbody
+                            tr
+                              td 1
+                              td 00:00:00
+                              td 01/10/1997
+                              td GCP-ALV
+                              td Dante Bazaldua
+                              td 3/5
+                    .collapsible-body
+                      p What the heck
+              tr
+                td.collapsible.z-depth-0#collapsible-data(data-collapsible="accordion", colspan="6")
+                  li
+                    .collapsible-header 
+                      p 2. What that fuck
+                    .collapsible-body
+                      p What the heck
+
+
+      
+block after-dom-scripts
+  script(src="javascripts/index.js")

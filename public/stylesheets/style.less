@@ -1,8 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400,500');
+
+@title-font: 'Montserrat';
+@body-font: 'Roboto';
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: @body-font, Arial, Helvetica, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.container{
+  max-width: 90%;
+  width: 85% !important;
+}
+
+h1{
+  font-family: @title-font, sans-serif;
+}
+
+#table-data{
+  table{
+    td{
+      padding: 0px 5px;
+    }
+  }
+}
+
+#collapsible-data{
+  border: 0px;
+  li{
+    list-style: none;
+    line-height: 0;
+  }
+  .collapsible-header, .collapsible-body{
+    border-bottom: 0px;
+    height: 30px;
+  }
+  .collapsible-header{
+    font-family: @title-font, sans-serif;
+    padding: 0px;
+    line-height: 0.5;
+    .inside{
+      line-height: 1.5;
+      padding: 20px;
+      margin-top: 5px;
+    }
+  }
+  .collapsible-body{
+    background-color: #f0f0f0;
+  }
+}
+
+#collapsible-data:hover{
 }

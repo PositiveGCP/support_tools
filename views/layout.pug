@@ -3,5 +3,13 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='stylesheets/vendor/materialize.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    script(src='javascripts/vendor/jquery.min.js')
+    script(src='javascripts/vendor/materialize.min.js')
+    block before-dom-scripts
+    
   body
     block content
+
+block after-dom-scripts
