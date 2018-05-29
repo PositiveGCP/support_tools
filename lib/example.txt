@@ -1,0 +1,64 @@
+class||GCP Creativos||0||Tutorial Automático||Tutorial Automático||
+intro_topic||GCP Creativos||0||Tutorial Automático||Tutorial Automático||
+intro_topic||Tutorial Automático||0||Tutorial Automático||Tutorial Automático||
+intro_topic||Bienvenido. Bienvenida. En un momento más darán inicio las preguntas de prueba de la Encuesta de Cumplimiento Institucional. Haga el favor de escuchar primero la pregunta, piense en su respuesta y presione la barra espaciadora cuando esté listo para dar su respuesta.||0||Tutorial Automático||Tutorial Automático||
+pregunta||Indica tu primer nombre únicamente.||0||Tutorial Automático||Tutorial Automático||
+pregunta||Cómo te sientes el día de hoy?||0||Tutorial Automático||Tutorial Automático||
+intro_topic||Ahora daremos comienzo con la Encuesta. El tema es:||0||Tutorial Automático||Tutorial Automático||
+intro_topic||Integridad||0||Integridad||Integridad||
+pregunta||Qué significa para ti ser honesto?||20||Integridad||Integridad||
+pregunta||Acostumbras cumplir con tus promesas y compromisos de trabajo? Porqué?||20||Integridad||Integridad||
+pregunta||Con frecuencia nos enfrentamos a situaciones de tener que elegir entre lo que está bien y lo que está mal para la empresa. Si te ha sucedido, podrías dar ejemplos de como lo manejaste?||30||Integridad||Integridad||
+pregunta||Cuando te comprometes de palabra en algún asunto de trabajo, lo cumples?||40||Integridad||Integridad||
+pregunta||Alguna vez observaste a alguien haciendo un acto deshonesto en el trabajo? Hiciste algo al respecto?||30||Integridad||Integridad||
+pregunta||Te consideras un buen ejemplo para tus compañeros de trabajo? Si es afirmativo, explica porqué.||20||Integridad||Integridad||
+intro_topic||Lealtad y Permanencia||0||Integridad||Lealtad y Permanencia||
+pregunta||En tu opinión, como identificas cuando una persona es leal a su empresa?||20||Integridad||Lealtad y Permanencia||
+pregunta||Cuál es tu opinión de las personas que cambian constantemente de trabajo?||20||Integridad||Lealtad y Permanencia||
+pregunta||Tienes un plan o algún problema que te obligue a dejar de trabajar en poco tiempo en la empresa?||30||Integridad||Lealtad y Permanencia||
+pregunta||Que se debe hacer con un compañero que no muestra respeto a las normas de trabajo?||30||Integridad||Lealtad y Permanencia||
+pregunta||Con base a tu situación personal y laboral actual, cuanto tiempo tienes pensado trabajar en la empresa?||30||Integridad||Lealtad y Permanencia||
+pregunta||Por tu forma de trabajar, consideras constantemente cambiar de trabajo por el que te ofrezca mejor ingreso? O prefieres avanzar una carrera de largo plazo con nosotros?||40||Integridad||Lealtad y Permanencia||
+intro_topic||Comunicación||0||Temas||Comunicación||
+pregunta||Sabes escuchar y respetar los puntos de vista de los demás?||30||Temas||Comunicación||
+pregunta||Qué opinas de las personas que no saben escuchar y respetar los puntos de vista de los demás?||20||Temas||Comunicación||
+pregunta||Das instrucciones comprensibles y claras a tu gente? Por qué piensas esto?||30||Temas||Comunicación||
+pregunta||Haces presentaciones efectivas? Cuál fue la última presentación efectiva que recuerdes haber realizado ?||30||Temas||Comunicación||
+pregunta||Utilizas tus habilidades gráficas, verbales y escritas para comunicar tus ideas de manera efectiva? O se te dificulta la comunicación de tu creatividad hacia los demás? Explica tu posición en este tema.||40||Temas||Comunicación||
+intro_topic||Trabajo en Equipo||0||Temas||Trabajo en Equipo||
+pregunta||En tus reuniones de trabajo, escuchas a los demás o sólo los interrumpes? Explica.||20||Temas||Trabajo en Equipo||
+pregunta||Trabajas fácilmente con personas con diferente punto de vista? Toleras a compañeros cuando se expresan de manera diferente?||30||Temas||Trabajo en Equipo||
+pregunta||Sabes asumir tus responsabilidades en un proyecto asignado entre varios? O acostumbras a evitar tus tareas?||40||Temas||Trabajo en Equipo||
+pregunta||Sabes motivar a tu gente? O te es indiferente su situación personal?||30||Temas||Trabajo en Equipo||
+pregunta||Eres capaz de ceder un beneficio económico, cuando tu compañero requiere motivación?||30||Temas||Trabajo en Equipo||
+intro_topic||Calidad y Habilidad||0||Temas||Calidad y Habilidad||
+pregunta||En tu actividad, eres capaz de producir trabajos de alta calidad, de manera eficiente?||20||Temas||Calidad y Habilidad||
+pregunta||Cuando te solicitan múltiples trabajos en corto tiempo, se te dificulta organizar su producción?||30||Temas||Calidad y Habilidad||
+pregunta||Eres capaz de decir 'No', cuando el tiempo ofrecido para concluir el trabajo, es insuficiente para una producción de calidad? O prefieres callar y generar trabajos de bajo rendimiento?||30||Temas||Calidad y Habilidad||
+pregunta||Eres capaz de comunicar el tiempo necesario para cumplir con la calidad necesaria para su éxito?||30||Temas||Calidad y Habilidad||
+pregunta||Cuando es necesario, pones un esfuerzo extra para sacar los objetivos del trabajo solicitado?||30||Temas||Calidad y Habilidad||
+pregunta||Acostumbras a utilizar el trabajo creativo de otros, y presentarlo como propio?||40||Temas||Calidad y Habilidad||
+pregunta||Consideras ético 'piratear' imágenes, diseños o componentes de diseño, para evitar pagar por el trabajo creativo de otros?||30||Temas||Calidad y Habilidad||
+intro_topic||Liderazgo||0||Aptitudes||Liderazgo||
+pregunta||Describe brevemente las cualidades de un líder.||20||Aptitudes||Liderazgo||
+pregunta||Cómo notas la diferencia entre un líder y un seguidor?||20||Aptitudes||Liderazgo||
+pregunta||Danos un ejemplo de un líder en tu vida personal, y describe el porqué lo consideras así.||20||Aptitudes||Liderazgo||
+pregunta||Has ocupado cargos de liderazgo?||30||Aptitudes||Liderazgo||
+pregunta||Cuando te dan una tarea, tienes iniciativa propia para resolver tus encargos? O te limitas a cumplir lo que te dicen?||30||Aptitudes||Liderazgo||
+pregunta||Cuando das tareas o indicaciones, la gente te hace caso? Explica porqué lo hacen.||40||Aptitudes||Liderazgo||
+intro_topic||Responsabilidad||0||Aptitudes||Responsabilidad||
+pregunta||Te responsabilizas del éxito o fracaso de tus acciones?||30||Aptitudes||Responsabilidad||
+pregunta||Sientes que cumples con los acuerdos y compromisos de tu trabajo? Cómo lo haces?||20||Aptitudes||Responsabilidad||
+pregunta||Actúas de acuerdo a las reglas y procedimientos que se te piden? Porqué?||20||Aptitudes||Responsabilidad||
+pregunta||Aportas dinero para los gastos de tu casa?||30||Aptitudes||Responsabilidad||
+pregunta||Te consideras una persona que siempre entrega su trabajo a tiempo?||40||Aptitudes||Responsabilidad||
+pregunta||Estás dispuesto a dar un esfuerzo extra, si tu trabajo lo requiere?||30||Aptitudes||Responsabilidad||
+intro_topic||Estabilidad Personal||0||Integridad||Estabilidad Personal||
+pregunta||En lo económico, estas bien con tu familia, o estas sujeto a presiones familiares por el tema del dinero?||30||Integridad||Estabilidad Personal||
+pregunta||Como consideras se encuentra la relación con tu familia?||20||Integridad||Estabilidad Personal||
+pregunta||Como reaccionas con las personas que te hacen enojar?||30||Integridad||Estabilidad Personal||
+pregunta||En tu tiempo libre, practicas alguna afición o deporte?||20||Integridad||Estabilidad Personal||
+pregunta||Te gusta apostar o participar en juegos de azar?||30||Integridad||Estabilidad Personal||
+pregunta||Si en algún momento llegaras a apostar en juegos de azar, lo harías con cantidades que superen tu ingreso mensual?||20||Integridad||Estabilidad Personal||
+pregunta||Tienes alguna deuda importante? Algo que no puedas sostener el pago con tu ingreso actual?||40||Integridad||Estabilidad Personal||
+intro_topic||Hemos concluido con el Cuestionario de Cumplimiento Institucional. Muchas Gracias por tu Tiempo. Que tengas un Buen Día !||0||Integridad||Estabilidad Personal||

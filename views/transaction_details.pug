@@ -1,0 +1,70 @@
+extends layout
+
+block before-dom-styles
+  link(rel='stylesheet', href='/stylesheets/transaction_details.css')
+
+block content
+  section#transaction-title
+    .container
+      button.btn.z-depth-0
+        a(href="/")
+          i.material-icons keyboard_arrow_left
+          | REGRESAR
+      h1 ID: #{tID}
+  section#personal-data
+    .container
+      p
+        strong Nombre: 
+        | Dante Fernando Bazaldua Huerta
+      p
+        strong Empresa: 
+        | Positive Compliance LLC
+      p
+        strong Encuesta: 
+        | Encuesta de Cumplimiento Institucional
+      p
+        strong Cuestionario: 
+        | 55 actividades.
+      p
+        strong Fecha: 
+        | 00:00:00 00/00/1111
+        
+  section#statistics
+    .container
+      .row
+        .col.s6#flags
+          h2 Banderas
+          p Se muestran las banderas que se han completado en el sistema frontapp. La azul es la actividad en la que se encuentra actualmente.
+          .collection
+            a.active.collection-item(href="#!")
+              | Terminando cuestionario...
+            a.collection-item(href="#!")
+              | Questionario | 10:23:25 | Que es ...
+            a.collection-item(href="#!")
+              | STAGE, TIME, ACTIVITY
+            a.collection-item(href="#!")
+                | STAGE, TIME, ACTIVITY
+            a.collection-item(href="#!")
+              | STAGE, TIME, ACTIVITY
+            a.collection-item(href="#!")
+              | STAGE, TIME, ACTIVITY
+            a.collection-item(href="#!")
+                | STAGE, TIME, ACTIVITY
+            a.collection-item(href="#!")
+              | STAGE, TIME, ACTIVITY
+            a.collection-item(href="#!")
+              | STAGE, TIME, ACTIVITY
+            a.collection-item(href="#!")
+                | STAGE, TIME, ACTIVITY
+            a.collection-item(href="#!")
+              | STAGE, TIME, ACTIVITY
+            a.collection-item(href="#!")
+              | STAGE, TIME, ACTIVITY
+            a.collection-item(href="#!")
+                | STAGE, TIME, ACTIVITY
+        .col.s6#calculated
+          h3 78%
+      
+  
+
+block after-dom-scripts

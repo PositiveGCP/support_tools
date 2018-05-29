@@ -1,0 +1,25 @@
+extends layout
+
+block before-dom-styles
+  link(rel='stylesheet', href='/stylesheets/wizard.css')
+    
+block before-dom-scripts
+  // TODO: Change if production
+  script(src="/javascripts/plugins/vue.js")
+
+block content
+  .container 
+    h1 Wizard
+    form#wizard(method="post", action="", enctype="multipart/form-data")
+      .file-field(input-field)
+        .btn.z-depth-0
+          span File
+          input#wizard-input-file(name="survey_template", type="file")
+        .file-path-wrapper
+          input.file-path.validate(type="text")
+      button.btn.z-depth-0#wizard-send Enviar
+        
+  
+  
+block after-dom-scripts
+  script(src="/javascripts/wizard.js")

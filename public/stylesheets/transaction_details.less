@@ -1,0 +1,70 @@
+@import "master.less";
+
+#transaction-title{
+  margin-top: 40px;
+  button{
+    border: 2px solid #222;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 0 10px;
+    margin: 0;
+    a{
+      color: #222;
+      display: flex;
+      vertical-align: middle;
+    }
+  }
+  button:hover{
+    background-color: #222;
+    a{
+      color: #fff;
+    }
+  }
+}
+
+#personal-data{
+  p{
+    font-family: @title-font, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    strong{
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}
+
+#statistics{
+  .container{
+    border-top: 1px solid #d0d0d0;
+    .row{
+      #flags{
+        padding-right: 20px;
+        border-right: 1px solid #d0d0d0;
+        h2{
+          font-family: @title-font, sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+        }
+        p{
+          font-family: @title-font, sans-serif;
+          font-size: 12px;
+        }
+        .collection{
+          margin-top: 20px;
+          .collection-item{
+            color: #222;
+            font-size: 14px;
+          }
+          .active{
+            background-color: #5eabe9;
+            color: #00164b;
+          }
+        }
+      }
+      #calculated{
+
+      }
+    }
+  }
+}

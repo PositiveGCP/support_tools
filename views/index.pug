@@ -1,114 +1,33 @@
 extends layout
 
+block before-dom-styles
+  link(rel='stylesheet', href='/stylesheets/index.css')
+
 block content
-  .container
-    .row
-      h1 Support tools
-      p Se ordenan del más reciente al menos reciente. 
-  
-  section#control-panel
+  section#jumbotron
     .container
-      form#next-page
-        ul.right
-          li
-            .page_counter
-              p Página 1 de 10
-          li
-            button.z-depth-0.btn(type="button", name="next")
-              i.material-icons keyboard_arrow_left
-          li
-            button.z-depth-0.btn(type="button", name="before")
-              i.material-icons keyboard_arrow_right
-        
-  section#table-data
+      h2 Herramientas de soporte
+      
+  section#menu
     .container
       .row
-        table.highlight.centered#table-data
-          col(width="5%")
-          col(width="7%")
-          col(width="7%")
-          col(width="15%")
-          col(width="30%")
-          col(width="16%")
-          col(width="10%")
-          col(width="10%")
-          thead
-            tr
-              th #
-              th Hora
-              th Fecha
-              th PUID
-              th Nombre
-              th Entidad
-              th Estado
-              th 
-          tfoot
-            tr
-              td(colspan="100") Mostrando un total de # resultados. 
-          tbody
-            tr
-              td 1
-              td 00:00:00
-              td 01/10/1997
-              td GCP-ALV
-              td Ricardo DLV
-              td RC
-              td Trash
-              td 
-                button.btn.z-depth-0 ENTRAR
-            tr
-              td 1
-              td 00:00:00
-              td 01/10/1997
-              td GCP-ALV
-              td Jesús Fragoso
-              td RC
-              td Using
-              td 
-                button.btn.z-depth-0 ENTRAR
-            tr
-              td 1
-              td 00:00:00
-              td 01/10/1997
-              td GCP-ALV
-              td José Fragoso
-              td AC
-              td Using
-              td 
-                button.btn.z-depth-0 ENTRAR
-            tr
-              td 1
-              td 00:00:00
-              td 01/10/1997
-              td GCP-ALV
-              td Dante Bazaldua
-              td Positive Compliance
-              td Trash
-              td 
-                button.btn.z-depth-0 ENTRAR
-            tr
-              td 1
-              td 00:00:00
-              td 01/10/1997
-              td GCP-ALV
-              td Nissim Heffes
-              td NC
-              td Using
-              td 
-                button.btn.z-depth-0 ENTRAR
-            tr
-              td 1
-              td 00:00:00
-              td 01/10/1997
-              td GCP-ALV
-              td Julk
-              td Positive Compliance
-              td Using
-              td 
-                button.btn.z-depth-0 ENTRAR
-                
-
-
-      
+        .col.s4
+          .card.small
+            .card-image.waves-effect.waves-block.waves-light
+              img.activator(src="/images/magic.png")
+            .card-content
+              span.card-title.activator.grey-text.text-darken-4
+                | Card Title
+                i.material-icons.right more_vert
+              p
+                a(href="#", target="_blank") Link
+            .card-reveal
+              span.card-title.grey-text.text-darken-4
+                | Card Title
+                i.material-icons.right close
+              p Here is some text about this
+        .col.s4
+        .col.s4
+    
+  
 block after-dom-scripts
-  script(src="javascripts/index.js")

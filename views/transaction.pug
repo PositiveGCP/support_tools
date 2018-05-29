@@ -1,0 +1,187 @@
+extends layout
+
+block before-dom-styles
+  link(rel='stylesheet', href='/stylesheets/transaction.css')
+
+block content
+  .container
+    .row
+      h1 Black Hat Tracker
+  
+  section#control-panel
+    .container
+      form#next-page
+        ul.right
+          li
+            .page_counter
+              p Página 1 de 10
+          li
+            button.z-depth-0.btn(type="button", name="next")
+              i.material-icons keyboard_arrow_left
+          li
+            button.z-depth-0.btn(type="button", name="before")
+              i.material-icons keyboard_arrow_right
+        
+  section#table-data
+    .container
+      .row
+        table.highlight.centered#table-data
+          col(width="5%")
+          col(width="7%")
+          col(width="7%")
+          col(width="15%")
+          col(width="30%")
+          col(width="16%")
+          col(width="10%")
+          col(width="10%")
+          thead
+            tr
+              th #
+              th Hora
+              th Fecha
+              th PUID
+              th Nombre
+              th Entidad
+              th Estado
+              th 
+          tfoot
+            tr
+              td(colspan="100") Mostrando un total de # resultados. 
+          tbody
+            tr
+              td 1
+              td 00:00:00
+              td 01/10/1997
+              td GCP-ALV
+              td Ricardo DLV
+              td RC
+              td Trash
+              td 
+                button.btn.z-depth-0 
+                  a(href="/transaction/id_t", target="_blank") ENTRAR
+            tr
+              td 1
+              td 00:00:00
+              td 01/10/1997
+              td GCP-ALV
+              td Jesús Fragoso
+              td RC
+              td Using
+              td 
+                button.btn.z-depth-0 
+                  a(href="/transaction/id_t", target="_blank") ENTRAR
+            tr
+              td 1
+              td 00:00:00
+              td 01/10/1997
+              td GCP-ALV
+              td José Fragoso
+              td AC
+              td Using
+              td 
+                button.btn.z-depth-0 
+                  a(href="/transaction/id_t", target="_blank") ENTRAR
+            tr
+              td 1
+              td 00:00:00
+              td 01/10/1997
+              td GCP-ALV
+              td Dante Bazaldua
+              td Positive Compliance
+              td Trash
+              td 
+                button.btn.z-depth-0 
+                  a(href="/transaction/id_t", target="_blank") ENTRAR
+            tr
+              td 1
+              td 00:00:00
+              td 01/10/1997
+              td GCP-ALV
+              td Nissim Heffes
+              td NC
+              td Using
+              td 
+                button.btn.z-depth-0 
+                  a(href="/transaction/id_t", target="_blank") ENTRAR
+            tr
+              td 1
+              td 00:00:00
+              td 01/10/1997
+              td GCP-ALV
+              td Julk
+              td Positive Compliance
+              td Using
+              td 
+                button.btn.z-depth-0 
+                  a(href="/transaction/id_t", target="_blank") ENTRAR
+            tr
+              td 1
+              td 00:00:00
+              td 01/10/1997
+              td GCP-ALV
+              td Ricardo DLV
+              td RC
+              td Trash
+              td 
+                button.btn.z-depth-0 
+                  a(href="/transaction/id_t", target="_blank") ENTRAR
+            tr
+              td 1
+              td 00:00:00
+              td 01/10/1997
+              td GCP-ALV
+              td Jesús Fragoso
+              td RC
+              td Using
+              td 
+                button.btn.z-depth-0 
+                  a(href="/transaction/id_t", target="_blank") ENTRAR
+            tr
+              td 1
+              td 00:00:00
+              td 01/10/1997
+              td GCP-ALV
+              td José Fragoso
+              td AC
+              td Using
+              td 
+                button.btn.z-depth-0 
+                  a(href="/transaction/id_t", target="_blank") ENTRAR
+            tr
+              td 1
+              td 00:00:00
+              td 01/10/1997
+              td GCP-ALV
+              td Dante Bazaldua
+              td Positive Compliance
+              td Trash
+              td 
+                button.btn.z-depth-0 
+                  a(href="/transaction/id_t", target="_blank") ENTRAR
+            tr
+              td 1
+              td 00:00:00
+              td 01/10/1997
+              td GCP-ALV
+              td Nissim Heffes
+              td NC
+              td Using
+              td 
+                button.btn.z-depth-0 
+                  a(href="/transaction/id_t", target="_blank") ENTRAR
+            tr
+              td 1
+              td 00:00:00
+              td 01/10/1997
+              td GCP-ALV
+              td Julk
+              td Positive Compliance
+              td Using
+              td 
+                button.btn.z-depth-0 
+                  a(href="/transaction/id_t", target="_blank") ENTRA
+
+
+      
+block after-dom-scripts
+  script(src="/javascripts/transaction.js")
