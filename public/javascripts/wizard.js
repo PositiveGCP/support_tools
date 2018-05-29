@@ -1,5 +1,8 @@
-$('#wizard-send').click(function (evt){
-  evt.preventDefault();
+$(document).ready(function() {
+    $('select').material_select();
+  });
+
+function makeRequest() {
   let survey_template = $('#wizard-input-file')[0];
   if( survey_template.files.length == 0 ){
     var $toastContent = $('<span>No has subido archivos aún.</span>').add($('<button class="btn-flat toast-action" onclick="OKremove()">OK</button>'));
@@ -25,7 +28,7 @@ $('#wizard-send').click(function (evt){
       console.log(data);
     });
   }
-});
+}
 
 function createData(){
   let data = new FormData();
@@ -40,3 +43,32 @@ function OKremove(){
   var toastInstance = toastElement.M_Toast;
   toastInstance.remove();
 }
+
+var wizard_app = new Vue({
+  el: '#wizard-app',
+  data: {
+    survey: {
+      clasificacion: '',
+      cuestionario: null,
+      empresa: '',
+      type: '',
+      allowed_list: null
+    },
+    empresa:{
+      nombre: '',
+      key: ''
+    },
+    conteo: 0
+  },
+  methods: {
+    getJSONSurvey: function (event) {
+      event.preventDefault();
+      makeRequest();
+    }
+  }
+})
+
+$('#type').on('change', function(e) {
+  let type = $('#type').val();
+  wizard_app.survey.type = type;
+});

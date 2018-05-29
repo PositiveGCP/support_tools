@@ -1,8 +1,18 @@
 var express = require('express');
 var router = express.Router();
-const multer = require('multer');
-var upload = multer({ storage: multer.memoryStorage({}), limits: {fileSize: 1000000 } });
 var dataP = require('../lib/dataconverter');
+var csrf = require('csurf'); // Required for login
+var multer = require('multer'); // Recieve files
+
+var csrfProtection = csrf({ cookie: true });
+
+router.get('/login', csrfProtection, function(req, res, next) {
+  res.render('login', {
+    title: 'Iniciar Sesión',
+    token: req.csrfToken()
+  });
+});
+
 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Soporte' });
@@ -19,6 +29,8 @@ router.get('/transaction/:transactionID', function(req, res){
 router.get('/wizard', function(req, res, next) {
   res.render('wizard', { title: 'Wizard' });
 });
+
+var upload = multer({ storage: multer.memoryStorage({}), limits: {fileSize: 1000000 } });
 
 router.post('/wizard', upload.single('survey_template'), function(req, res, next) {
 

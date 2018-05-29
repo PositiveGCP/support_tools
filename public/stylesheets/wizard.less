@@ -1,1 +1,67 @@
 @import "master.less";
+@import "lib/navbar.less";
+
+#wizard-app{
+  font-family: @title-font, sans-serif;
+  margin-bottom: 50px;
+  .brand{
+    h1, p{
+      display: inline-block;
+    }
+  }
+  p{
+    font-size: 16px;
+  }
+  #options ul{
+    line-height: 30px;
+    li{
+      list-style: none;
+      span{
+        font-family: 14px;
+        display: flex;
+        vertical-align: middle;
+        i{
+          font-size: 18px;
+          margin: 5px;
+        }
+        strong{
+          font-weight: 600;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-content li > span{
+  color: #222;
+}
+.dropdown-content li > span > label {
+  top: -10px !important;
+}
+
+.action{
+  font-size: 11px !important;
+  text-transform: uppercase;
+  border-bottom: 1px solid #cccccc;
+}
+.ready{
+  color: #33a145;
+}
+
+.not-ready{
+  color: #d6d6d6;
+}
+
+.positivebtn{
+  border: 1.5px solid #222;
+  background-color: #fff;
+  color: #222;
+}
+.disabled{
+  border: none;
+}
+.positivebtn:hover{
+  background-color: #222;
+  color: #fff;
+}

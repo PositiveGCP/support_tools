@@ -6,20 +6,109 @@ block before-dom-styles
 block before-dom-scripts
   // TODO: Change if production
   script(src="/javascripts/plugins/vue.js")
+  script(src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js")
+  script(src="/javascripts/common/masterdb.js")
 
 block content
-  .container 
-    h1 Wizard
-    form#wizard(method="post", action="", enctype="multipart/form-data")
-      .file-field(input-field)
-        .btn.z-depth-0
-          span File
-          input#wizard-input-file(name="survey_template", type="file")
-        .file-path-wrapper
-          input.file-path.validate(type="text")
-      button.btn.z-depth-0#wizard-send Enviar
+  include lib/navbar
+  section#wizard-app
+    .container#top-info
+      .brand
+        h1 Wizard
+        p v0.5
+      p.action Esta información se irá completando automáticamente conforme se vaya llenando el formulario.
+      .row
+        .col.l8#options
+          ul
+            li
+              span
+                div(v-if="survey.clasificacion.length == ''")
+                  i.material-icons.not-ready check_circle_outline
+                div(v-else)
+                  i.material-icons.ready check_circle_outline
+                strong Encuesta: 
+                | {{survey.clasificacion}}
+            li
+              span
+                div(v-if="empresa.nombre.length == ''")
+                  i.material-icons.not-ready check_circle_outline
+                div(v-else)
+                  i.material-icons.ready check_circle_outline
+                strong Empresa: 
+                | {{empresa.nombre}} {{empresa.key}}
+            li
+              span
+                div(v-if="survey.type.length == ''")
+                  i.material-icons.not-ready check_circle_outline
+                div(v-else)
+                  i.material-icons.ready check_circle_outline
+                strong Tipo: 
+                | {{survey.type}}
+            li
+              span
+                div(v-if="conteo == 0")
+                  i.material-icons.not-ready check_circle_outline
+                div(v-else)
+                  i.material-icons.ready check_circle_outline
+                strong Conteo: 
+                | {{conteo}}
+
+        .col.s4
+          p Subir encuesta
+          div(v-if="conteo == 0")
+            button.positivebtn.btn.z-depth-0.disabled Subir
+          div(v-else)
+            button.positivebtn.btn.z-depth-0 Subir
+          
+
+    .container
+      p.action Rellena el siguiente formulario:
+      form#wizard(method="post", action="", enctype="multipart/form-data")
+        .row
+          .input-field.col.s12
+            input.validate#clasificacion(placeholder="Ej. Cuestionario de cumplimiento Institucional", type="text", v-model="survey.clasificacion")
+            label(for="clasificacion") Nombre del cuestionario
+            
+          .input-field.col.l4
+            select#type
+              option(value="" disabled selected) Elige la opción 
+              option RSE
+              option GCP
+              option ICC
+            label Tipo de encuesta
+            
+          .input-field.col.l4
+            select#company
+              option(value="" disabled selected) Elige la opción 
+              option(value="key1") Empresa 1
+              option(value="key2") Empresa 2
+              option(value="key3") Empresa 3
+            label Cuenta
+            
+          .input-field.col.l4
+            select#entity(multiple)
+              option(value="" disabled selected) Elige la opción 
+              option(value="key1") Entidad 1
+              option(value="key2") Entidad 2
+              option(value="key3") Entidad 3
+            label Entidades aceptadas
+            
+          .input-field.col.l12
+            p.action Con el archivo de .txt generá los valores de la encuesta:
+          
+          .input-field.file-field.col.l12
+            .positivebtn.btn.z-depth-0
+              span File
+              input#wizard-input-file(name="survey_template", type="file")
+            .file-path-wrapper
+              input.file-path.validate(type="text", placeholder="Da click aquí.")
+                
+          .input-field.col.l12
+            button(v-on:click="getJSONSurvey").positivebtn.btn.z-depth-0#wizard-send Obtener encuesta
         
   
   
 block after-dom-scripts
+  script(src="/javascripts/common/render.js")
   script(src="/javascripts/wizard.js")
+  script(src="/javascripts/wizard_firebase.js")

@@ -1,0 +1,32 @@
+extends layout
+
+block before-dom-styles
+  link(rel="stylesheet", href="stylesheets/login.css")
+    
+block before-dom-scripts
+  // TODO: Change if production
+  script(src='https://unpkg.com/nprogress@0.2.0/nprogress.js', type='application/javascript')
+  script(src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js")
+  script(src="/javascripts/common/masterdb.js")
+
+block content
+  .main-wrapper
+    #register-space.col.s12.m12.l12
+      #information.row
+        img.center.valign(src='images/loader.png', alt='Logo positive')
+        h3.center-align Iniciar sesión
+        h4.center-align FRONT APP
+      form#register.row
+        input#csrf(type="hidden", name='_csrf', value= token)
+        #email.input-field
+          input#email-input.validate(type='email', autocomplete='off', name='user')
+          label(for='email', data-error='Intenta escribiendo un dominio válido.' data-sucess='Excelente.') Correo electrónico
+        #password.input-field
+          input#passwd-input.validate(type='password', autocomplete='off', name='pass')
+          label(for='passwd') Contraseña
+        #send
+          button#login-request.btn.z-depth-0.waves-effect.hoverable(type='submit', name='submit')
+            | Entrar
+
+block after-dom-scripts
+  script(src='javascripts/login.js')

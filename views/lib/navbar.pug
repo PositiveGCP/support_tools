@@ -1,0 +1,24 @@
+#user-display
+  section#header
+    div.left
+      h3 
+        strong SupportTools
+        | v1.0
+    
+    div.right
+      ul
+        li
+          a#psc-signout.tooltipped(data-position="bottom", data-delay="50", data-tooltip="Cerrar sesión") 
+            i.material-icons close
+        li.date-formatted
+          h5
+        li
+          h5#topbarcompany
+            strong Entidad:
+            | {{company.ncomercial}}
+        li
+          img(v-bind:src="company.logo", alt='empresa')
+        li#topbaruser
+          h5.truncate {{user.email}}
+        li
+          img(v-bind:src="user.foto", alt='usuario')

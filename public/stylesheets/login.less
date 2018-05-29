@@ -1,0 +1,146 @@
+body,
+.main-wrapper {
+  min-height: 100vh;
+  height: 100vh;
+  overflow-y: hidden;
+  background:
+    // url('../images/ex.png') top left,
+    #f6f6f6;
+    // linear-gradient(rgb(237, 237, 237), rgb(255, 255, 255)),
+    // white;
+}
+.alignElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gbTransition( @time ){
+  -webkit-transition: all @time ease;
+  -moz-transition: all @time ease;
+  -o-transition: all @time ease;
+  transition: all @time ease;
+}
+#image-roller {
+  height: 100vh;
+  background-image: url('../images/bg-login.jpg');
+  background-position: center;
+  background-size: cover;
+}
+#image-roller blockquote {
+  color: #d0d0d0;
+  position: absolute;
+  width: 25% !important;
+  bottom: 0;
+  margin: 0px 0px 40px 40px;
+  border-left: 5px solid #acacac !important;
+}
+#register-space {
+  max-width: 100%;
+}
+#register-space #information {
+  color: #444444;
+}
+#register-space #information h3 {
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  font-size: 30px;
+  font-weight: 300;
+}
+#register-space #information h4 {
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+}
+#register-space #information .chip {
+  border: 2px solid #ff4f57;
+  background: transparent !important;
+  height: 35px;
+  .gbTransition( 0.3s );
+}
+#register-space #information .chip a {
+  color: #ff4f57;
+}
+#register-space #information .chip:hover {
+  background: #ff4f57 !important;
+  a{
+    color: #fff;
+  }
+}
+#register-space{
+  #information{
+    margin-top: 10%;
+    img{
+      display: block;
+      height: 100px;
+      width: 100px;
+      margin: auto;
+    }
+  }
+}
+#register-space #register {
+  width: 40%; // En caso de querer que esté enmedio y pequeño
+  padding: 0px 60px 0px 60px;
+  label{
+    // font-variant: small-caps; // Quitar las versalitas
+  }
+}
+#register-space #register #email .active,
+#register-space #register #password .active,
+#password-recover #email-recovery .active {
+  color: #282828;
+}
+#register-space{
+  #register #email, #password{
+    label{
+      font-size: 12px;
+      display: block;
+      font-weight: 300;
+    }
+    #passwd-input{
+      display: block;
+    }
+    input{
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}
+// Todos los input
+#register-space #register #email input:focus,
+#register-space #register #password input:focus,
+#password-recover #email-recovery input:focus,
+#register-space #register #email input:active,
+#register-space #register #password input:active,
+#password-recover #email-recovery input:active,
+#register-space #register #email input:visited,
+#register-space #register #password input:visited,
+#password-recover #email-recovery input:visited, {
+  border-bottom: 1px solid #282828;
+  box-shadow: 0 0.5px 0 0 #282828;
+  padding: 0px 0px 0px 5px;
+  margin-top: 5px;
+}
+#register-space #register #password {
+  margin-bottom: 20px;
+}
+#register-space #send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#register-space #send button {
+  height: 30px;
+  width: 50%;
+  border-radius: 40px;
+  background-color: #257cff;
+  color: #fff;
+  margin-bottom: 10px;
+  .gbTransition( 0.2s );
+  font-size: 12px;
+  line-height: 0px;
+  letter-spacing: 0.3em;
+  margin: 20px 0px 20px 0px;
+}
+#register-space #send button:hover{
+  background-color: #626262;
+  }
