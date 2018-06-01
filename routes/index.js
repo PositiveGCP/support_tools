@@ -15,15 +15,16 @@ router.get('/login', csrfProtection, function(req, res, next) {
 
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Soporte' });
+  // res.render('index', { title: 'Soporte' });
+  res.redirect('/wizard');
 });
 
-router.get('/transaction/:transactionID', function(req, res){
-  let transaction = req.params.transactionID;
-  console.log("Entraste a " + req.params.transactionID);
-  res.render('transaction_details', { title: 'Resultados '+transaction, tID: transaction });
-  // TODO: Create the middleware to check in the database for correc id.
-});
+// router.get('/transaction/:transactionID', function(req, res){
+//   let transaction = req.params.transactionID;
+//   console.log("Entraste a " + req.params.transactionID);
+//   res.render('transaction_details', { title: 'Resultados '+transaction, tID: transaction });
+//   // TODO: Create the middleware to check in the database for correc id.
+// });
 
 // Wizard Stuff
 router.get('/wizard', function(req, res, next) {
