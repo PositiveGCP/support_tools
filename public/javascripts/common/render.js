@@ -19,7 +19,6 @@ var navbar = new Vue({
 $('#psc-signout').click(function( event ){
   event.preventDefault();
   auth.signOut();
-  clearStorage();
   window.location.href='/login';
 });
 

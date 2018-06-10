@@ -140,7 +140,20 @@ function errHandler(error) {
 auth.onAuthStateChanged(function(user) {
   if (user) { // Cuando el usuario se identifico
     NProgress.start();
-    window.location.href = '/wizard';
+    let queryUsuario = db.ref('Usuarios/' + user.uid );
+
+    queryUsuario.once('value').then(function(snapshot) {
+      let info_user = snapshot.val();
+      if (info_user.Tipo == "superuser" || info_user.Tipo == "soporte"){
+        window.location.href = '/wizard';
+      }
+      else{
+        $('#email-input').val("");
+        $('#passwd-input').val("");
+        crearAlerta("Ocurrió un error.", "black");
+        auth.signOut();
+      }
+    });
   }
   return;
 });
