@@ -19,6 +19,25 @@ router.get('/', function(req, res, next) {
   res.redirect('/wizard');
 });
 
+// This is just for the authentication and get user permissions.
+router.post('/auth/:uid', function (req, res) {
+  if (!req.params.uuid) {
+    // TODO: Check database and return if you have permission
+  }
+});
+
+router.get('/survey', function(req, res, next){
+  res.render('surveys', {
+    title: 'Encuestas'
+  });
+});
+
+router.post('/', function (req, res) {
+  if (!req.params.uuid) {
+    // TODO: Check database and return if you have permission
+  }
+});
+
 // router.get('/transaction/:transactionID', function(req, res){
 //   let transaction = req.params.transactionID;
 //   console.log("Entraste a " + req.params.transactionID);
