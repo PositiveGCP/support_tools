@@ -27,25 +27,19 @@
 }
 
 .upperbar{
-  ul{
-    width: 100%;
-    li{
-      display: inline-block;
-      #text-search{
-        input{
-          font-family: 'Montserrat', sans-serif;
-          font-size: 14px;
-          border: none !important;
-        }
-        input:focus, input:visited, input:active, input:hover{
-          border: none !important;
-          box-shadow: none !important;
-        }
-      }
-      a{
-        float: right;
-      }
+  #text-search{
+    input{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      border: none !important;
     }
+    input:focus, input:visited, input:active, input:hover{
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+  a{
+    float: right;
   }
 }
 
@@ -56,5 +50,13 @@
   padding: 10px;
   td{
     padding: 6px 5px;
+  }
+  a{
+    display: flex;
+    vertical-align: middle;
+    i{
+      font-size: 18px;
+      margin-right: 4px;
+    }
   }
 }

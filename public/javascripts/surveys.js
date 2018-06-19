@@ -6,8 +6,10 @@ auth.onAuthStateChanged( function( user ){
 });
 
 $(document).ready(function(){
-  // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-  $('.modal').modal();
+  $.get("/api/survey/all", function(data, status){
+    console.log(data)
+    surveyApp.sample.data = data.data;
+  });
 });
 
 Vue.component('datatable', {
@@ -22,8 +24,7 @@ Vue.component('datatable', {
   `
   <table class="highlight datatable"> 
     <col width="10%"> 
-    <col width="10%">
-    <col width="10%">
+    <col width="20%">
     <col width="45%">
     <col width="15%">
     <col width="10%">
@@ -43,14 +44,17 @@ Vue.component('datatable', {
     </tfoot>
 
     <tbody> 
+      <tr colspan="100" v-if="data == undefined"> Procesando... </tr>
       <tr v-for="element in data"> 
         <td> {{ element.uid }} </td>
-        <td> {{ element.date }} </td>
-        <td> {{ element.company }} </td>
+        <td> {{ element.company | checkNotAsigned }} </td>
         <td> {{ element.name }} </td>
         <td> {{ element.no }} </td>
         <td>
-          <a class='btn z-depth-0 pbb' @click="openModal(element)" href='#'>Acciones</a>
+          <a class='btn z-depth-0 pbb' :id="element.uid" @click="removeQuest(element.uid)" href='#'>
+            <i class="material-icons"> delete_forever </i>
+            QUITAR
+          </a>
         </td>
       </tr>
     </tbody>
@@ -58,9 +62,14 @@ Vue.component('datatable', {
   `,
   computed: {
     getTotalSurveys: function(){
-      let cache = this.data;
-      let keys = Object.keys(cache);
-      return keys.length;
+      if( this.data ){
+        let cache = this.data;
+        let keys = Object.keys(cache);
+        return keys.length;      
+      }
+      else{
+        return 0;
+      }
     }
   },
   methods: {
@@ -68,49 +77,66 @@ Vue.component('datatable', {
       // TODO: Do something
       console.log(this.checked);
     },
-    openModal: function( info ){
-      surveyApp.one = info;
-      $('#modal_actions').modal('open');
+    removeQuest: function( id ){
+      // TODO: Magic comes here.
+      console.log("Se va a remover: " + id);
     }
   },
   filters: {
+    checkNotAsigned: function(text){
+      if(text == "")
+        return "No asignada";
+      return text;
+    },
     caps: function(text){
       return text.toUpperCase();
     },
   }
 });
 
-var exampleData = {
-  headers: ['ID', 'empresa', 'fecha', 'clasificacion', 'No. preguntas'],
-  data: {
-    0: {
-      uid: 'ID0',
-      date: 'FECHA0',
-      company: 'EMPRESA0',
-      company_id: 'ID',
-      name: 'Bla bla bla de cumplimiento',
-      no: 10,
-      raw: null
-    },
-    1: {
-      uid: 'ID1',
-      date: 'FECHA1',
-      company: 'EMPRESA1',
-      company_id: 'ID',
-      name: 'Bla bla bla de cumplimiento',
-      no: 10,
-      raw: null
-    }
-  }
-   
-};
+// var exampleData = {
+//   headers: ['ID', 'empresa', 'clasificacion', 'No. preguntas'],
+//   data: {
+//     0: {
+//       uid: 'ID0',
+//       date: 'FECHA0',
+//       company: '',
+//       company_id: 'ID',
+//       name: 'Bla bla bla de cumplimiento',
+//       no: 10,
+//     },
+//     1: {
+//       uid: 'ID1',
+//       date: 'FECHA1',
+//       company: 'EMPRESA1',
+//       company_id: 'ID',
+//       name: 'Bla bla bla de cumplimiento',
+//       no: 10,
+//     }
+//   }
+// };
 
 var surveyApp = new Vue({
   el: '#surveys',
   data: {
-    sample: exampleData,
-    one: {
-      name: ''
+    sample: {
+      headers: ['ID', 'empresa', 'clasificacion', 'No. preguntas'], 
+      data: null
+    },
+    search: ''
+  },
+  methods:{
+    searchByName: function(){
+      let cache = this.sample.data;
+      let chunk = this.search;
+      if ( chunk != '' ){
+        let regex = new RegExp('.*?' + chunk + '+.*?');
+        let final = [];
+        let result = _.find(this.sample.data, function(el) { return regex.test(el.name) });
+        final.push(result);
+        // console.log(result);
+        this.sample.data = final;
+      }
     }
   }
 });
