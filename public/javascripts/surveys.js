@@ -7,7 +7,7 @@ auth.onAuthStateChanged( function( user ){
 
 $(document).ready(function(){
   $.get("/api/survey/all", function(data, status){
-    console.log(data)
+    // console.log(data)
     surveyApp.sample.data = data.data;
   });
 });
