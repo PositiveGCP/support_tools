@@ -1,12 +1,7 @@
 extends layout
 
 block before-dom-styles
-  link(rel="stylesheet", href="stylesheets/surveys.css")
-
-block before-dom-scripts
-  script(src="/javascripts/plugins/vue.min.js")
-  script(src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js")
-  script(src="/javascripts/common/masterdb.js")
+  link(rel="stylesheet", href="/stylesheets/surveys.css")
 
 block content
   include lib/navbar
@@ -17,41 +12,55 @@ block content
       .upperbar
         p.action Busca por nombre el cuestionario
         ul
-          li.spaced
+          li
             form#text-search
               input(type="text", placeholder="Nombre de encuesta a buscar")
-          li.spaced-5
-            a.btn.z-depth-0.pbb#before(href="#!")
-              i.material-icons keyboard_arrow_left
-          li.spaced-5
-            a.btn.z-depth-0.pbb#after(href="#!")
-              i.material-icons keyboard_arrow_right
-            
-      table.highlight#table-data
-        col(width="2%")
-        col(width="10%")
-        col(width="60%")
-        col(width="25%")
+ 
 
-        thead
-          tr
-            th #
-            th Fecha
-            th Nombre
-            th Entidad
-            th 
-        tfoot
-          tr
-            td(colspan="100") Mostrando un total de # resultados. 
-        tbody
-          tr
-            td 1
-            td 00:00:00
-            td 01/10/1997
-            td GCP-ALV
-            td 
-              a.btn.pbb.z-depth-0(href="/transaction/id_t", target="_blank") ENTRAR
+        datatable(
+          v-bind:data="sample.data"
+          v-bind:headers="sample.headers"
+          )
+
+  
+ 
+    .modal#modal_actions
+      .modal-content
+        h3.action Información de encuesta.
+        p 
+          strong Nombre: 
+          |  {{ one.name }}
+
+      //- table.highlight#table-data
+      //-   col(width="2%")
+      //-   col(width="10%")
+      //-   col(width="60%")
+      //-   col(width="25%")
+
+      //-   thead
+      //-     tr
+      //-       th #
+      //-       th Fecha
+      //-       th Nombre
+      //-       th Entidad
+      //-       th 
+      //-   tfoot
+      //-     tr
+      //-       td(colspan="100") Mostrando un total de # resultados. 
+      //-   tbody
+      //-     tr
+      //-       td 1
+      //-       td 00:00:00
+      //-       td 01/10/1997
+      //-       td GCP-ALV
+      //-       td 
+      //-         a.btn.pbb.z-depth-0(href="/transaction/id_t", target="_blank") ENTRAR
+
+block before-dom-scripts
+  script(src="/javascripts/plugins/vue.js")
+  script(src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js")
+  script(src="/javascripts/common/masterdb.js")
 
 block after-dom-scripts
   script(src="/javascripts/common/render.js")
-  script(src='javascripts/surveys.js')
+  script(src='/javascripts/surveys.js')

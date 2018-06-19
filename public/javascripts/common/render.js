@@ -5,12 +5,12 @@ var navbar = new Vue({
   data:{
     user: {
       email: "Esperando...",
-      foto: "images/loader.gif",
+      foto: "/images/loader.gif",
       ref: ''
     },
     company: {
       ncomercial: "Esperando...",
-      logo: "images/loader.gif",
+      logo: "/images/loader.gif",
       ref: ''
     }
   }
