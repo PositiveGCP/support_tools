@@ -8,59 +8,37 @@
   }
 }
 
-// Positive Black Button
-.pbb{
-  margin-right: 10px;
-  font-family: 'Roboto', sans-serif;
-  border-radius: 4px;
-  padding: 0px 12px;
-  font-size: 10px;
-  height: 26px;
-  line-height: 26px;
-  border: 1px solid #222222;
-  background-color: transparent;
-  color: #222;
-}
-.pbb:hover{
-  background-color: #222222;
-  color: #fff;
-}
-
 .upperbar{
-  ul{
-    width: 100%;
-    li{
-      display: inline-block;
-      #text-search{
-        input{
-          font-family: 'Montserrat', sans-serif;
-          font-size: 14px;
-          border: none !important;
-        }
-        input:focus, input:visited, input:active, input:hover{
-          border: none !important;
-          box-shadow: none !important;
-        }
-      }
-      a{
-        float: right;
-      }
+  #text-search{
+    input{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      border: none !important;
+    }
+    input:focus, input:visited, input:active, input:hover{
+      border: none !important;
+      box-shadow: none !important;
     }
   }
-}
-.spaced{
-  width: 90%;
-}
-.spaced-5{
-  width: 5%;
+  a{
+    float: right;
+  }
 }
 
-#table-data{
+.datatable{
   font-family: 'Montserrat',sans-serif;
   border-top: 1.5px solid #d1d1d1;
   font-size: 12px;
   padding: 10px;
   td{
     padding: 6px 5px;
+  }
+  a{
+    display: flex;
+    vertical-align: middle;
+    i{
+      font-size: 18px;
+      margin-right: 4px;
+    }
   }
 }
