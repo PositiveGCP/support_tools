@@ -32,7 +32,7 @@ function makeRequest() {
   else{
     let data = createData();
     $.ajax({
-      url: '/',
+      url: './',
       data: data,
       cache: false,
       contentType: false,
