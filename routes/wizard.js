@@ -5,9 +5,11 @@ var multer = require('multer'); // Recieve files
 
 
 router.get('/', function(req, res, next){
-    res.render('surveys', {
-        title: 'Encuestas'
-    });
+    res.redirect('/wizard/app')
+    // res.render('wizard', { title: 'Wizard' });
+    // res.render('surveys', {
+    //     title: 'Encuestas'
+    // });
 });
 
 router.get('/app', function(req, res, next) {
